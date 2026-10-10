@@ -1,0 +1,101 @@
+/* --- Reset and Base Styles --- */* {
+    box-sizing: border-box;  /* Padding and border included in width */
+    margin: 0;               /* Remove default margins */
+    padding: 0;              /* Remove default padding */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* --- Header --- */
+header {
+    background-color: #044b0a;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    nav {
+        margin-top: 20px;
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            &:hover {
+                color: #92286a;
+            }
+        }
+    }
+}
+
+/* --- Main Content --- */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: "Verdana", "Helvetica", "Arial", sans-serif;
+}
+.main-content h2,h3 {
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #4A90E2; /* accent color */
+    font-weight: 600;
+}
+
+.main-content p {
+    margin: 1rem 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* --- Project Cards with Flexbox --- */
+.project-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-grid article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 calc(50% - 20px); /* Two cards per row with gap */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-grid article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.project-grid article h3 {
+    margin-bottom: 10px;
+    color: #044b0a; /* Match header color */
+}
+.project-grid article p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #044b0a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #0b8347; /* Accent color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #92286a; /* Change color on hover */
+    text-decoration: underline;
+}
